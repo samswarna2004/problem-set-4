@@ -18,6 +18,14 @@ def main():
     
     pred_universe, arrest_events, charge_counts, charge_counts_by_offense = part1.extract_transform()
     
+    print(pred_universe.head())
+    print(pred_universe.columns)
+    print(pred_universe.info())
+
+    print(arrest_events.head())
+    print(arrest_events.columns)
+    print(arrest_events.info())
+    
     ##  PART 2: PLOT EXAMPLES  ##
     # Apply plot theme
     part2.seaborn_settings()
@@ -31,6 +39,7 @@ def main():
     ##  PART 3: BAR PLOTS AND HISTOGRAMS  ##
     # 1
 
+    part3.bar_hist_plots(pred_universe)
     # 2
 
     # 3
@@ -39,14 +48,14 @@ def main():
 
     ##  PART 4: CATEGORICAL PLOTS  ##
     # 1
-    
+    part4.cat_plots(pred_universe, arrest_events)
     # 2
 
     # 3
 
     ##  PART 5: SCATTERPLOTS  ##
     # 1
-    
+    part5.scatter_plots(pred_universe, arrest_events)
     # 2
 
 
